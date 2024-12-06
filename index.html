@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Judge Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="loginForm.css">
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+    <!-- Judge Login Form -->
+    <div class="judgeLoginContainer" id="judgeLoginContainer">
+        <h2>Judge Login</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <i class='bx bx-user'></i>
+                <div class="form-group">
+                    <input type="email" id="judgeEmail" name="judgeEmail" placeholder="Email" required>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <i class='bx bx-lock'></i>
+                <div class="form-group">
+                    <input type="password" id="judgePassword" name="judgePassword" placeholder="Password" required>
+                </div>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="showPassword" />
+                <label for="showPassword">Show Password</label>
+            </div>
+            
+            <button type="submit" class="login-btn">Login</button>
+
+        </form>
+        
+    </div>
+</body>
+</html>

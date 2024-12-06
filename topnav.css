@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Khand:wght@400;700&display=swap");
+
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #5F97AA;
+    --accent-color-1: #18363E;
+    --accent-color-2: #2D5F6E;
+    --accent-color-3: #3E88A5;
+    --accent-color-4: #93C4D1;
+    --accent-color-5: #0058b120;
+    --accent-color-6: #0058b10c;
+    --light-color: #f4f4f4;
+    --text-color: #ffffff;
+    --font-family: 'Khand', sans-serif;
+}
+
+/* Header & Top Navigation */
+.top-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle-btn {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    margin-left: 3vw;
+    font-size: 1.1rem;
+}
+
+.admin-profile .admin-icon {
+    font-size: 2.5rem;
+    margin-right: 1vw;
+}
+.admin-profile .admin-icon{
+    transform: scale(1.10); 
+    box-shadow: 0 6px 10px var(--shadow-color);
+}
+
+.signout-btn {
+    background-color: var(--accent-color-2);
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 4vw;
+    width: 150px;
+}
+
+.signout-btn:hover {
+    background-color: var(--accent-color-3);
+    transform: scale(1.10); 
+    box-shadow: 0 6px 10px var(--shadow-color);
+}

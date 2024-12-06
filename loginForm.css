@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Khand:wght@400;700&display=swap");
+
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #5F97AA;
+    --accent-color-1: #18363E;
+    --accent-color-2: #2D5F6E;
+    --accent-color-3: #3E88A5;
+    --accent-color-4: #93C4D1;
+    --accent-color-5: #0058b120;
+    --accent-color-6: #2c3e507d;
+    --accent-color-7: #3b7085;
+    --shadow-color: rgba(0, 0, 0, 0.1); 
+    --light-color: #f4f4f4;
+    --text-color: #ffffff;
+    --font-family: 'Khand', sans-serif;
+}
+
+* {
+    font-family: var(--font-family);
+}
+
+button {
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-image: url(images/Simple\ Bg.png);
+    background-size: cover;
+    /* overflow-y: hidden;
+    overflow-x: hidden; */
+}
+
+/* Judge Login Container */
+.judgeLoginContainer {
+    margin: 20vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    width: 29vw;
+    max-width: 500px; /* Maximum width for larger screens */
+    background-color: rgba(255, 255, 255, 0.153); 
+    backdrop-filter: blur(2px); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.judgeLoginContainer h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--light-color);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-group input {
+    color: var(--light-color);
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color-6);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0); 
+    backdrop-filter: blur(10px); 
+    width: 100%; /* Full width for input fields */
+    max-width: 400px; /* Maximum width for input fields */
+}
+
+.form-group input:focus {
+    border: 1px solid var(--light-color);
+}
+
+.form-group input {
+    width: 23vw;
+}
+
+.form-group input::placeholder {
+    color: var(--light-color);
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group i {
+    color: var(--light-color);
+    font-size: 1.5em;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.checkbox-group label {
+    color: var(--light-color); 
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Button */
+.login-btn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    height: 50px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 400px; /* Maximum width for button */
+}
+
+.login-btn:hover {
+    background: var(--accent-color-1); 
+    transform: translateY(-2px);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .judgeLoginContainer {
+        width: 80%; /* Make form width larger on mobile */
+        padding: 20px;
+    }
+    .judgeLoginContainer h2 {
+        font-size: 3rem;
+    }
+
+    .form-group input {
+        width: 85%; /* Make inputs fill the container */
+        font-size: 1rem;
+    }
+
+    .input-group i {
+        font-size: 1.3em; /* Smaller icons on mobile */
+    }
+
+    button {
+        width: 100%; /* Full width button */
+        font-size: 1rem;
+    }
+
+    .judgeLoginContainer h2 {
+        font-size: 1.6rem; /* Smaller header font size on mobile */
+    }
+}
+
+/* 481px and above */
+@media (min-width: 481px) {
+    .judgeLoginContainer {
+        width: 60%; /* Adjust form width for tablets */
+    }
+    
+    .judgeLoginContainer h2 {
+        font-size: 3rem;
+    }
+
+    .form-group input {
+        width: 90%; /* Adjust input field width */
+    }
+
+    button {
+        width: 90%; /* Adjust button width */
+    }
+
+    .input-group i {
+        font-size: 1.4em; /* Slightly smaller icons on tablets */
+    }
+
+    .judgeLoginContainer h2 {
+        font-size: 1.8rem; /* Adjust header size for tablets */
+    }
+}
+
+/* Tablet Devices (Up to 768px) */
+@media (min-width: 768px) {
+    .judgeLoginContainer {
+        width: 40%; /* Adjust form width for tablets */
+    }
+
+    .judgeLoginContainer h2 {
+        font-size: 3rem;
+    }
+
+    .form-group input {
+        width: 90%; /* Adjust input field width */
+    }
+
+    button {
+        width: 90%; /* Adjust button width */
+    }
+
+    .input-group i {
+        font-size: 1.4em; /* Slightly smaller icons on tablets */
+    }
+
+    .judgeLoginContainer h2 {
+        font-size: 1.8rem; /* Adjust header size for tablets */
+    }
+}
+
+/* Desktop Devices (Laptop, Large Screens) */
+@media (min-width: 1024px) {
+    .judgeLoginContainer {
+        width: 25vw; /* Form width for larger screens */
+        max-width: 600px; /* Maximum width for desktop */
+    }
+
+    .form-group input {
+        width: 90%; /* Ensure full width for inputs */
+    }
+
+    button {
+        width: 100%; /* Full width for button */
+    }
+
+    .input-group i {
+        font-size: 1.6em; /* Larger icons for desktop */
+    }
+
+    .judgeLoginContainer h2 {
+        font-size: 2rem; /* Larger header for larger screens */
+    }
+}

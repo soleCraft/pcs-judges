@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Khand:wght@400;700&display=swap");
+
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #5F97AA;
+    --accent-color-1: #18363E;
+    --accent-color-2: #2D5F6E;
+    --accent-color-3: #3E88A5;
+    --accent-color-4: #93C4D1;
+    --accent-color-5: #0058b120;
+    --accent-color-6: #2c3e507d;
+    --accent-color-7: #3b7085;
+    --shadow-color: rgba(0, 0, 0, 0.1); 
+    --light-color: #f4f4f4;
+    --text-color: #ffffff;
+    --font-family: 'Khand', sans-serif;
+}
+* {
+    font-family: var(--font-family);
+    box-sizing: border-box;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-image: url(images/Simple\ Bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: var(--light-color);
+    text-align: center;
+}
+
+button {
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contestantContainer button:hover {
+    background-color: var(--accent-color-3);
+    transform: scale(1.10); 
+    box-shadow: 0 6px 10px var(--shadow-color);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Contestants Section */
+.contestantContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+}
+
+.malAndFemaleContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.male-container, .female-container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 20px 20px 10px 5px var(--shadow-color);
+    background-color: rgba(255, 255, 255, 0.071); 
+    backdrop-filter: blur(10px); 
+}
+
+.contestant-buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 15px;
+    padding: 20px;
+}
+
+.contestant-buttons button {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    padding: 17px 20px;
+    border-radius: 5px;
+}
+
+@media (min-width: 320px) {
+    h1 {
+       font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    h1 {
+       font-size: 2.5rem;
+    }
+}
+
+

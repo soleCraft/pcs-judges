@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pageant Scoring</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="images/Sportswear.png" as="image">
+    <link rel="preload" href="images/EveningGown.png" as="image">
+    <link rel="preload" href="images/TalentPerformance.png" as="image">
+    <link rel="preload" href="images/Q&A.png" as="image">
+    <link rel="preload" href="images/OverallImpact.png" as="image">
+    <link rel="stylesheet" href="contestanContainer.css">
+    <link rel="stylesheet" href="criteriaContainer.css">
+    <link rel="stylesheet" href="scoreContainer.css">
+    <link rel="stylesheet" href="topnav.css">
+    <link rel="stylesheet" href="mediaQueries.css">
+    <script type="module" src="script.js"></script>
+    <!-- <link rel="stylesheet" href="topnav.css"> -->
+
+</head>
+<body>
+    
+    <!-- Top Navigation -->
+    <header class="top-nav" id="topNav">
+        <div class="admin-profile">
+            <i class='bx bxs-user-circle admin-icon' aria-hidden="true"></i>
+            <span></span>
+        </div>
+        <button class="signout-btn" id="signOutBtn">
+            <i class='bx bx-log-out'></i> <span>Sign Out</span>
+        </button>        
+    </header>
+
+    <!--Contestant Selection -->
+    <div class="container contestantContainer" id="contestantContainer">
+        <div class="contestantHeader">
+            <h1>CONTESTANTS</h1>
+        </div>
+        <div class="malAndFemaleContainer">
+            <div class="male-container">
+                <h2>Male Contetsants</h2>
+                <div class="contestant-buttons" id="maleContestant"></div>
+            </div>
+            
+            <div class="female-container">
+                <h2>Female Contetsants</h2>
+                <div class="contestant-buttons" id="femaleContestant"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--Criteria Selection -->
+    <div class="criteriaContainer" id="criteriaContainer">
+        <h2>Select Criteria for Judging</h2>
+        <div class="criteria-buttons">
+            <button id="sportswearCriteria">
+                <div class="criteriaWrapper">Sportswear</div>
+            </button>
+            <button id="eveningGownCriteria">
+                <div class="criteriaWrapper">Evening Gown</div>
+            </button>
+            <button id="talentPerformanceCriteria">
+                <div class="criteriaWrapper">Talent/Performance</div>
+            </button>
+            <button id="questionAndAnswerCriteria">
+                <div class="criteriaWrapper">Question & Answer</div>
+            </button>
+            <button id="overallImpactCriteria">
+                <div class="criteriaWrapper">Overall Impact</div>
+            </button>
+        </div>
+    </div>
+
+    <div class="contestantInfoAndCriteriaWrapper">
+        <div class="contestant-info" id="contestant-info">
+            <h3 id="nameHeader"></h3>
+        </div>
+    
+        <!-- Sportswear Scoring -->
+        <div class="scoreContainer sportswear" id="sportswear">
+    
+            <div class="gradingForm">
+                <h3 id="criteriaHeader">Sportswear</h3>
+                <!-- Fitness and Physique -->
+                <div class="button-group">
+                    <label for="fitnessPhysique">Fitness and Physique (40%)</label>
+                    <div id="fitnessPhysiqueButtons" class="buttons" data-value="40">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+    
+                <!-- Confidence and Poise -->
+                <div class="button-group">
+                    <label for="confidencePoise">Confidence and Poise (30%)</label>
+                    <div id="confidencePoiseButtons" class="buttons" data-value="30">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+    
+                <!-- Walk/Stage Presence -->
+                <div class="button-group">
+                    <label for="walkPresence">Walk/Stage Presence (20%)</label>
+                    <div id="walkPresenceButtons" class="buttons" data-value="20">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+    
+                <!-- Audience Impact Sportswear-->
+                <div class="button-group">
+                    <label for="audienceImpactSport">Audience Impact (10%)</label>
+                    <div id="audienceImpactSport" class="buttons" data-value="10">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" name="submitScoreSportswear" id="submitScoreSportswear" class="submit-btn">SUBMIT SCORE</button>
+        </div>
+    
+        <!-- Evening Gown -->
+        <div class="scoreContainer eveningGown" id="eveningGown">
+    
+            <div class="gradingForm">
+                <h3 id="criteriaHeader">Evening Gown</h3>
+                <!-- Elegance and Grace -->
+                <div class="button-group">
+                    <label for="eleganceGrace">Elegance and Grace (35%)</label>
+                    <div id="eleganceGraceButtons" class="buttons" data-value="35">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+    
+                <!-- Gown Design and Fit -->
+                <div class="button-group">
+                    <label for="gownDesignFit">Gown Design and Fit (20%)</label>
+                    <div id="gownDesignFitButtons" class="buttons" data-value="20">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+    
+                <!-- Poise and Posture -->
+                <div class="button-group">
+                    <label for="poisePosture">Poise and Posture (25%)</label>
+                    <div id="poisePostureButtons" class="buttons" data-value="25">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+    
+                <!-- Walk/Stage Presence -->
+                <div class="button-group">
+                    <label for="walkPresenceEvening">Walk/Stage Presence (10%)</label>
+                    <div id="walkPresenceEveningButtons" class="buttons" data-value="10">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+    
+                <!-- Audience Impact Evening Gown-->
+                <div class="button-group">
+                    <label for="audienceImpactEvening">Audience Impact (10%)</label>
+                    <div id="audienceImpactEvening" class="buttons" data-value="10">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+
+            </div>
+            <button type="submit" name="submitScore" id="submitScoreEveningGown" class="submit-btn">SUBMIT SCORE</button>
+        </div>
+    
+        <!-- Talent/Performance -->
+        <div class="scoreContainer talentPerformance" id="talentPerformance">
+            <div class="gradingForm">
+                <h3 id="criteriaHeader">Talent/Performance</h3>
+                <!-- Creativity and Originality -->
+                <div class="button-group">
+                    <label for="creativityAndOriginality">Creativity and Originality (40%)</label>
+                    <div id="creativityAndOriginality" class="buttons" data-value="40">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+    
+                <!-- Skill and Execution -->
+                <div class="button-group">
+                    <label for="skillAndExecution">Skill and Execution (40%)</label>
+                    <div id="skillAndExecution" class="buttons" data-value="40">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+    
+                <!-- Stage Presence -->
+                <div class="button-group">
+                    <label for="stagePresence">Stage Presence (10%)</label>
+                    <div id="stagePresence" class="buttons" data-value="10">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+    
+                <!-- Audience Impact Talent -->
+                <div class="button-group">
+                    <label for="audienceImpactTalent">Audience Impact (10%)</label>
+                    <div id="audienceImpactTalent" class="buttons" data-value="10">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" name="submitScore" id="submitScoreTalentPerformance" class="submit-btn">SUBMIT SCORE</button>
+        </div>
+    
+        <!-- Question and Answer -->
+        <div class="scoreContainer questionAndAnswer" id="questionAndAnswer">
+            <div class="gradingForm">
+                <h3 id="criteriaHeader">Question and Answer</h3>
+                <!-- Relevance of Answer -->
+                <div class="button-group">
+                    <label for="relevanceOfAnswer">Relevance of Answer(40%)</label>
+                    <div id="relevanceOfAnswer" class="buttons" data-value="40">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+    
+                <!-- Confidence and Delivery -->
+                <div class="button-group">
+                    <label for="confidenceAndDelivery">Confidence and Delivery (30%)</label>
+                    <div id="confidenceAndDelivery" class="buttons" data-value="30">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+    
+                <!-- Composure Under Pressure -->
+                <div class="button-group">
+                    <label for="composureUnderPressure">Composure Under Pressure (20%)</label>
+                    <div id="composureUnderPressure" class="buttons" data-value="20">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+    
+                <!-- Audience Impact Q&A -->
+                <div class="button-group">
+                    <label for="audienceImpactQA">Audience Impact (10%)</label>
+                    <div id="audienceImpactQA" class="buttons" data-value="10">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" name="submitScore" id="submitScoreQA" class="submit-btn">SUBMIT SCORE</button>
+        </div>
+    
+        <!-- Overall Impact -->
+        <div class="scoreContainer overallImpact" id="overallImpact">
+    
+            <div class="gradingForm">
+                <h3 id="criteriaHeader">Overall Impact</h3>
+                <!-- Beauty -->
+                <div class="button-group">
+                    <label for="beauty">Beauty(40%)</label>
+                    <div id="beauty" class="buttons" data-value="40">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+    
+                <!-- Charisma -->
+                <div class="button-group">
+                    <label for="charisma">Charisma (30%)</label>
+                    <div id="charisma" class="buttons" data-value="30">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+    
+                <!-- Personality -->
+                <div class="button-group">
+                    <label for="personality">Personality (30%)</label>
+                    <div id="personality" class="buttons" data-value="30">
+                        <button class="btn" value="1">1</button>
+                        <button class="btn" value="2">2</button>
+                        <button class="btn" value="3">3</button>
+                        <button class="btn" value="4">4</button>
+                        <button class="btn" value="5">5</button>
+                        <button class="btn" value="6">6</button>
+                        <button class="btn" value="7">7</button>
+                        <button class="btn" value="8">8</button>
+                        <button class="btn" value="9">9</button>
+                        <button class="btn" value="10">10</button>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" name="submitScore" id="submitScoreOverallImpact" class="submit-btn">SUBMIT SCORE</button>
+        </div>
+    
+    </div>
+
+    
+</body>
+</html>
